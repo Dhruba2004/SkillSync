@@ -1,0 +1,9 @@
+langchain-google-genai
+google-generativeai
+pillow
+lanchain-groq
+youtube-transcript-api
+pypdf2
+pypdf
+bs4
+
