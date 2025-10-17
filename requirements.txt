@@ -1,9 +1,6 @@
-langchain-google-genai
-google-generativeai
-pillow
-lanchain-groq
-youtube-transcript-api
-pypdf2
-pypdf
-bs4
+streamlit
+langchain
+langchain-groq
+requests
+python-dotenv
 
