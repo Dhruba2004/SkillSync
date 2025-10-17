@@ -4,4 +4,5 @@ langchain-community
 langchain-groq
 requests
 python-dotenv
+pypdf
 
