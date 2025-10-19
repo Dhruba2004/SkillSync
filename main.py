@@ -1,5 +1,6 @@
 import streamlit as st
-from langchain.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader
+
 import json
 import tempfile
 from langchain_groq import ChatGroq
