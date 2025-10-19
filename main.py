@@ -107,12 +107,12 @@ def get_course_recommendations_llm(missing_skills, temperature=0.5, max_tokens=5
     skills_text = ", ".join(missing_skills[:5])  # Top 5 skills
 
     prompt = f"""
-You are an AI Career Advisor. Generate a JSON array of up to 5 Coursera courses 
+You are an AI Career Advisor. Generate a JSON array of up to 5 Coursera and Udemy courses 
 relevant to the following skills: {skills_text}. 
 Each course should have the following fields:
 - title: course name
-- platform: Coursera
-- link: direct course link
+- platform: Coursera or Udemy
+- link: direct course link only if it has valid link on Coursera or Udemy
 
 Output strictly in JSON format like this:
 [
