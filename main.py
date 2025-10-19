@@ -1,11 +1,10 @@
 import streamlit as st
 from langchain_community.document_loaders import PyPDFLoader
-
 import json
 import tempfile
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 import os
 import requests
 import re
