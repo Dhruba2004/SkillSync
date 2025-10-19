@@ -107,17 +107,20 @@ def get_course_recommendations_llm(missing_skills, temperature=0.5, max_tokens=5
     skills_text = ", ".join(missing_skills[:5])  # Top 5 skills
 
     prompt = f"""
-You are an AI Career Advisor. Generate a JSON array of up to 5 Coursera and Udemy courses 
-relevant to the following skills: {skills_text}. 
-Each course should have the following fields:
-- title: course name
-- platform: Coursera or Udemy
-- link: direct course link only if it has valid link on Coursera or Udemy
+You are an AI Career Advisor. Based on the following skill set: {skills_text}, search and provide up to 5 real, currently available online courses from Coursera and Udemy that best match these skills. 
+
+Each course must:
+- Be relevant to the given skills.
+- Exist on Coursera or Udemy (only include valid, working links).
+- Be unique (no duplicates or expired courses).
 
 Output strictly in JSON format like this:
 [
-  {{"title": "Machine Learning by Andrew Ng", "platform": "Coursera", "link": "https://www.coursera.org/learn/machine-learning"}}
+  {{"title": "Machine Learning by Andrew Ng", "platform": "Coursera", "link": "https://www.coursera.org/learn/machine-learning"}},
+  {{"title": "Python for Data Science and Machine Learning Bootcamp", "platform": "Udemy", "link": "https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/"}}
 ]
+
+Do not include any text outside the JSON array.
 """
 
     # Call LLM directly without PromptTemplate
