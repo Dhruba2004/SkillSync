@@ -116,8 +116,8 @@ Each course must:
 
 Output strictly in JSON format like this:
 [
-  {{"title": "Machine Learning by Andrew Ng", "platform": "Coursera", "link": "https://www.coursera.org/learn/machine-learning"}},
-  {{"title": "Python for Data Science and Machine Learning Bootcamp", "platform": "Udemy", "link": "https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/"}}
+  {"title": "Machine Learning by Andrew Ng", "platform": "Coursera", "link": "https://www.coursera.org/learn/machine-learning"},
+  {"title": "Python for Data Science and Machine Learning Bootcamp", "platform": "Udemy", "link": "https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/"}
 ]
 
 Do not include any text outside the JSON array.
